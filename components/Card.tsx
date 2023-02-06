@@ -48,15 +48,14 @@ export const Card = ({ title, href, children }: CardProps) => {
         },
       }}
     >
-      <Text
+      <Flex
         fontSize="1.5rem"
         fontWeight={600}
-        display="flex"
         flexDirection="row"
         columnGap={3}
       >
         {!!href ? <Released /> : <Soon />}
-      </Text>
+      </Flex>
       <Flex color="rgba(255, 255, 255, 0.5)">{children}</Flex>
     </Flex>
   );

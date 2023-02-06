@@ -7,15 +7,14 @@ import { Inter } from "@next/font/google";
 const inter = Inter({ subsets: ["latin"] });
 
 export const theme = extendTheme({
-  // config: {
-  //   initialColorMode: "dark",
-  //   useSystemColorMode: false,
-  // },
+  config: {
+    initialColorMode: "dark",
+    useSystemColorMode: false,
+  },
   styles: {
     global: (props: StyleFunctionProps) => ({
       body: {
         fontFamily: inter.style.fontFamily,
-        // color: mode("gray.800", "whiteAlpha.900")(props),
         color: "whiteAlpha.900",
         lineHeight: "base",
       },

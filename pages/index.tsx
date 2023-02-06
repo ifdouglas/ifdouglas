@@ -66,7 +66,7 @@ export default function Home() {
         </GridItem>
 
         <GridItem rowSpan={1} colSpan={1}>
-          <Card title="Moj"></Card>
+          <Card title="Hackings" href="https://www.hackings.com.br"></Card>
         </GridItem>
 
         <GridItem rowSpan={1} colSpan={1}>
