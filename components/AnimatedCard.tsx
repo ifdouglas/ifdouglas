@@ -18,6 +18,7 @@ export const AnimatedCard = ({ children }: CardAnimatedProps) => {
   return (
     <Flex
       display="flex"
+      flexDirection="column"
       position="relative"
       justifyContent="center"
       alignItems="center"

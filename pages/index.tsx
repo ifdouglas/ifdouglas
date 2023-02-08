@@ -1,14 +1,9 @@
 import Head from "next/head";
-import Image from "next/image";
 import { Inter } from "@next/font/google";
-import styles from "@/styles/Home.module.css";
 import { AnimatedCard } from "@/components/AnimatedCard";
 import { Card } from "@/components/Card";
-import { Flex, Grid, GridItem } from "@chakra-ui/react";
+import { Grid, GridItem } from "@chakra-ui/react";
 import { Text } from "@/components/Text";
-import Link from "next/link";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
@@ -51,7 +46,12 @@ export default function Home() {
           }}
         >
           <AnimatedCard>
-            <h2 className={inter.className}>Douglas Fernandes</h2>
+            <Text fontSize={50} fontWeight="extrabold">
+              Douglas Fernandes
+            </Text>
+            <Text fontSize={33} fontWeight="extrabold">
+              Software Engineer Specialist
+            </Text>
           </AnimatedCard>
         </GridItem>
 
