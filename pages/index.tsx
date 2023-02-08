@@ -56,9 +56,7 @@ export default function Home() {
         </GridItem>
 
         <GridItem rowSpan={1} colSpan={1}>
-          <Card title="Coffing" href="https://www.coffing.app">
-            <Text>Coffing</Text>
-          </Card>
+          <Card title="Coffing" href="https://www.coffing.app"></Card>
         </GridItem>
 
         <GridItem rowSpan={1} colSpan={1}>
@@ -67,18 +65,6 @@ export default function Home() {
 
         <GridItem rowSpan={1} colSpan={1}>
           <Card title="Hackings" href="https://www.hackings.com.br"></Card>
-        </GridItem>
-
-        <GridItem rowSpan={1} colSpan={1}>
-          <Card title="Moj"></Card>
-        </GridItem>
-
-        <GridItem rowSpan={1} colSpan={1}>
-          <Card title="Moj"></Card>
-        </GridItem>
-
-        <GridItem rowSpan={1} colSpan={1}>
-          <Card title="Moj"></Card>
         </GridItem>
       </Grid>
     </>
