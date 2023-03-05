@@ -2,8 +2,10 @@ import Head from "next/head";
 import { Inter } from "@next/font/google";
 import { AnimatedCard } from "@/components/AnimatedCard";
 import { Card } from "@/components/Card";
-import { Grid, GridItem } from "@chakra-ui/react";
+import { Flex, Grid, GridItem } from "@chakra-ui/react";
 import { Text } from "@/components/Text";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -52,6 +54,40 @@ export default function Home() {
             <Text fontSize={33} fontWeight="extrabold">
               Software Engineer Specialist
             </Text>
+            <Flex marginTop="50px" flexDirection="row" columnGap={5}>
+              {/* <Link href="#" target="_blank">
+                <Image
+                  src="/icons/whatsapp.svg"
+                  alt="Logo WhatsApp"
+                  width={50}
+                  height={50}
+                />
+              </Link> */}
+              <Link href="https://github.com/ifdouglas" target="_blank">
+                <Image
+                  src="/icons/github.svg"
+                  alt="Logo GitHub"
+                  width={50}
+                  height={50}
+                />
+              </Link>
+              <Link href="https://twiiter.com/ifdouglas" target="_blank">
+                <Image
+                  src="/icons/twitter.svg"
+                  alt="Logo Twitter"
+                  width={50}
+                  height={50}
+                />
+              </Link>
+              <Link href="https://instagram.com/ifdouglas" target="_blank">
+                <Image
+                  src="/icons/instagram.svg"
+                  alt="Logo Instagram"
+                  width={50}
+                  height={50}
+                />
+              </Link>
+            </Flex>
           </AnimatedCard>
         </GridItem>
 
@@ -60,11 +96,19 @@ export default function Home() {
         </GridItem>
 
         <GridItem rowSpan={1} colSpan={1}>
+          <Card title="Hackings" href="https://www.hackings.com.br"></Card>
+        </GridItem>
+
+        <GridItem rowSpan={1} colSpan={1}>
           <Card title="Calyptus"></Card>
         </GridItem>
 
         <GridItem rowSpan={1} colSpan={1}>
-          <Card title="Hackings" href="https://www.hackings.com.br"></Card>
+          <Card title="Singular"></Card>
+        </GridItem>
+
+        <GridItem rowSpan={1} colSpan={1}>
+          <Card title="Robotz"></Card>
         </GridItem>
       </Grid>
     </>
