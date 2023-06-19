@@ -1,13 +1,15 @@
 import Head from "next/head";
-import { Inter } from "@next/font/google";
 import { AnimatedCard } from "@/components/AnimatedCard";
 import { Card } from "@/components/Card";
 import { Flex, Grid, GridItem } from "@chakra-ui/react";
 import { Text } from "@/components/Text";
 import Image from "next/image";
 import Link from "next/link";
+import { formatDistance, subYears } from "date-fns";
 
 export default function Home() {
+  const workingYears = formatDistance(new Date("2011-01-01"), new Date());
+
   return (
     <>
       <Head>
@@ -48,11 +50,12 @@ export default function Home() {
           }}
         >
           <AnimatedCard>
-            <Text fontSize={50} fontWeight="extrabold">
+            <Text fontSize="6xl" fontWeight="extrabold">
               Douglas Fernandes
             </Text>
-            <Text fontSize={33} fontWeight="extrabold">
-              Software Engineer Specialist
+            <Text fontSize="2xl" m={10} fontWeight="bold" textAlign="justify">
+              {`a Software Engineer living in Brazil that has been
+              working with app development ${workingYears}. Here you can find some of my original ideias. Contact to bring yours to life.`}
             </Text>
             <Flex marginTop="50px" flexDirection="row" columnGap={5}>
               {/* <Link href="#" target="_blank">
@@ -92,15 +95,33 @@ export default function Home() {
         </GridItem>
 
         <GridItem rowSpan={1} colSpan={1}>
-          <Card title="Coffing" href="https://www.coffing.app"></Card>
+          <Card
+            title="Coffing"
+            subtitle="Create your own home office experience"
+            href="https://www.coffing.app"
+          ></Card>
         </GridItem>
 
         <GridItem rowSpan={1} colSpan={1}>
-          <Card title="Dupla de Dois"></Card>
+          <Card
+            title="Dupla de Dois"
+            subtitle="Generate couples for your tournament"
+          ></Card>
         </GridItem>
 
         <GridItem rowSpan={1} colSpan={1}>
-          <Card title="Hackings" href="https://www.hackings.com.br"></Card>
+          <Card
+            title="WhatsPrinter"
+            subtitle="Get orders from WhatsApp and print in real-time on your restaurant"
+          ></Card>
+        </GridItem>
+
+        <GridItem rowSpan={1} colSpan={1}>
+          <Card
+            title="Hackings"
+            subtitle="First class social media services"
+            href="https://www.hackings.com.br"
+          ></Card>
         </GridItem>
 
         {/* <GridItem rowSpan={1} colSpan={1}>

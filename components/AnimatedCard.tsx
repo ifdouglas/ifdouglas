@@ -24,6 +24,7 @@ export const AnimatedCard = ({ children }: CardAnimatedProps) => {
       alignItems="center"
       textAlign="center"
       height={800}
+      padding={10}
       transform="translateZ(0)"
       borderRadius={8}
       overflow="hidden"

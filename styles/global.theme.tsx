@@ -1,10 +1,14 @@
 import { extendTheme } from "@chakra-ui/react";
 import type { StyleFunctionProps } from "@chakra-ui/styled-system";
 // import { Space_Grotesk } from "@next/font/google";
-import { Inter } from "@next/font/google";
+import {
+  Inter_Tight as PrimaryFont,
+  Amatic_SC as SecondaryFont,
+} from "@next/font/google";
 
 // const spaceGrotesk = Space_Grotesk({ subsets: ["latin"] });
-const inter = Inter({ subsets: ["latin"] });
+const primaryFont = PrimaryFont({ subsets: ["latin"] });
+const secondaryFont = SecondaryFont({ subsets: ["latin"], weight: "400" });
 
 export const theme = extendTheme({
   config: {
@@ -14,9 +18,12 @@ export const theme = extendTheme({
   styles: {
     global: (props: StyleFunctionProps) => ({
       body: {
-        fontFamily: inter.style.fontFamily,
+        fontFamily: primaryFont.style.fontFamily,
         color: "whiteAlpha.900",
         lineHeight: "base",
+      },
+      h3: {
+        fontFamily: secondaryFont.style.fontFamily,
       },
     }),
   },

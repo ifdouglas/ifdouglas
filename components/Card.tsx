@@ -1,38 +1,43 @@
 import React, { ReactNode } from "react";
-import { Flex, Box, Link, Badge } from "@chakra-ui/react";
+import { Flex, Box, Link, Badge, HStack, VStack } from "@chakra-ui/react";
+import { ExternalLinkIcon } from "@chakra-ui/icons";
 import { Text } from "./Text";
 
 interface CardProps {
   title: string;
+  subtitle: string;
   href?: string;
   children?: ReactNode;
 }
 
-export const Card = ({ title, href, children }: CardProps) => {
+export const Card = ({ title, subtitle, href, children }: CardProps) => {
   const Released = () => (
-    <>
-      <Link href={href}>
-        <Text>{title}</Text>
-      </Link>
-      <Box as="span" display="inline-block" transition="transform 200ms">
-        -&gt;
+    <Link
+      display="flex"
+      flexDirection="row"
+      columnGap={3}
+      href={href}
+      target="_blank"
+    >
+      <Text as="h1">{title}</Text>
+      <Box as="sub" transition="transform 200ms">
+        <ExternalLinkIcon />
       </Box>
-    </>
+    </Link>
   );
 
   const Soon = () => (
-    <>
+    <HStack>
       <Text>{title}</Text>
-      <Badge
-        as="span"
-        display="inline-block"
+      <Text
+        as="sub"
         transition="transform 200ms"
         textTransform="uppercase"
-        height={5}
+        fontSize={11}
       >
-        <Text>soon</Text>
-      </Badge>
-    </>
+        soon
+      </Text>
+    </HStack>
   );
 
   return (
@@ -51,10 +56,13 @@ export const Card = ({ title, href, children }: CardProps) => {
       <Flex
         fontSize="1.5rem"
         fontWeight={600}
-        flexDirection="row"
+        flexDirection="column"
         columnGap={3}
       >
         {!!href ? <Released /> : <Soon />}
+        <Text fontSize={19} fontWeight="hairline">
+          {subtitle}
+        </Text>
       </Flex>
       <Flex color="rgba(255, 255, 255, 0.5)">{children}</Flex>
     </Flex>
