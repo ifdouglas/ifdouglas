@@ -96,20 +96,20 @@ export default function Home() {
         </GridItem>
 
         <GridItem rowSpan={1} colSpan={1}>
+          <Card title="Dupla de Dois"></Card>
+        </GridItem>
+
+        <GridItem rowSpan={1} colSpan={1}>
           <Card title="Hackings" href="https://www.hackings.com.br"></Card>
         </GridItem>
 
-        <GridItem rowSpan={1} colSpan={1}>
-          <Card title="Calyptus"></Card>
-        </GridItem>
-
-        <GridItem rowSpan={1} colSpan={1}>
+        {/* <GridItem rowSpan={1} colSpan={1}>
           <Card title="Singular"></Card>
-        </GridItem>
+        </GridItem> */}
 
-        <GridItem rowSpan={1} colSpan={1}>
+        {/* <GridItem rowSpan={1} colSpan={1}>
           <Card title="Robotz"></Card>
-        </GridItem>
+        </GridItem> */}
       </Grid>
     </>
   );

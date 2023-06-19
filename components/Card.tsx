@@ -11,7 +11,7 @@ interface CardProps {
 export const Card = ({ title, href, children }: CardProps) => {
   const Released = () => (
     <>
-      <Link href="https://www.coffing.app">
+      <Link href={href}>
         <Text>{title}</Text>
       </Link>
       <Box as="span" display="inline-block" transition="transform 200ms">
