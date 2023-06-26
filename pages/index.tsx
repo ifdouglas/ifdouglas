@@ -110,10 +110,17 @@ export default function Home() {
           ></Card>
         </GridItem>
 
-        <GridItem rowSpan={1} colSpan={1}>
+        {/* <GridItem rowSpan={1} colSpan={1}>
           <Card
             title="WhatsPrinter"
             subtitle="Get orders from WhatsApp and print in real-time on your restaurant"
+          ></Card>
+        </GridItem> */}
+
+        <GridItem rowSpan={1} colSpan={1}>
+          <Card
+            title="TL;DR"
+            subtitle="Paste a long text or a huge .pdf to receive a summarize in seconds."
           ></Card>
         </GridItem>
 
