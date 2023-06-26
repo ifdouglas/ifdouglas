@@ -106,6 +106,7 @@ export default function Home() {
           <Card
             title="Dupla de Dois"
             subtitle="Generate couples for your tournament"
+            href="https://apps.apple.com/br/app/dupla-de-dois/id6450417982"
           ></Card>
         </GridItem>
 
