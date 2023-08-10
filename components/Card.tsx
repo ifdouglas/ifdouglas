@@ -53,13 +53,12 @@ export const Card = ({
 
   return (
     <Flex
-      flexDirection="column"
+      direction="column"
+      rowGap={5}
       padding="1rem 1.2rem"
       height={390}
       borderRadius={8}
-      onClick={handleOnClick}
       _hover={{
-        cursor: "pointer",
         background: bgColor,
         span: {
           transform: "translateX(4px)",
@@ -67,18 +66,24 @@ export const Card = ({
       }}
       {...rest}
     >
-      <Flex
-        fontSize="1.5rem"
-        fontWeight={600}
-        flexDirection="column"
-        columnGap={3}
-      >
+      <Flex fontSize="1.5rem" fontWeight={600} direction="column" columnGap={3}>
         {/* <Released /> */}
         <Text fontSize={19} fontWeight="regular">
           {subtitle}
         </Text>
       </Flex>
-      <Flex color="rgba(255, 255, 255, 0.5)">{children}</Flex>
+      <Flex
+        width="fit-content"
+        color="rgba(255, 255, 255, 0.5)"
+        onClick={handleOnClick}
+        _hover={{
+          cursor: "pointer",
+          transition: "transform .2s ease-in-out",
+          transform: "scale(1.1)",
+        }}
+      >
+        {children}
+      </Flex>
     </Flex>
   );
 };

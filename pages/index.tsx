@@ -108,7 +108,6 @@ export default function Home() {
             title="Coffing"
             subtitle="Create your own home office envionment"
             href="https://www.coffing.app"
-            bgColor="#232323"
           >
             <Image
               src="/apps/coffing.png"
@@ -124,7 +123,6 @@ export default function Home() {
             title="Dupla de Dois"
             subtitle="Generate couples for your tournament"
             href="https://apps.apple.com/br/app/dupla-de-dois/id6450417982"
-            bgColor="#5F17FF"
           >
             <Image
               src="/apps/ddd.png"
@@ -147,13 +145,15 @@ export default function Home() {
             title="TL;DR"
             subtitle="Paste a long text or a huge .pdf to receive a summarize in seconds."
             href="https://apps.apple.com/br/app/tl-dr-too-long-dindt-read/id6449942477"
-            bgColor="#333333"
           >
             <Image
-              src="/apps/tldr.svg"
+              src="/apps/tldr.png"
               alt="Logo TL;DR"
               width={200}
               height={200}
+              style={{
+                boxShadow: "0px 2px 8px -1px #0000001a",
+              }}
             />
           </Card>
         </GridItem>
