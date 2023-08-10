@@ -1,13 +1,14 @@
 import { AnimatedCard } from "@/components/AnimatedCard";
 import { Card } from "@/components/Card";
-import { Flex, Grid, GridItem } from "@chakra-ui/react";
+import { Flex, Grid, GridItem, Image } from "@chakra-ui/react";
 import { Text } from "@/components/Text";
-import Image from "next/image";
+// import Image from "next/image";
 import Link from "next/link";
 import { formatDistance } from "date-fns";
 
 export default function Home() {
   const workingYears = formatDistance(new Date("2011-01-01"), new Date());
+  const sizesSocialLogo = [30, 50];
 
   return (
     <Flex overflowX="hidden">
@@ -58,7 +59,7 @@ export default function Home() {
               Fernandes
             </Text>
             <Text
-              fontSize={["xl", "2xl"]}
+              fontSize={["lg", "2xl"]}
               m={10}
               fontWeight="semibold"
               textAlign="justify"
@@ -67,37 +68,44 @@ export default function Home() {
               app development 12 years. Here you can find some of my original
               ideias. Contact to bring yours to life.
             </Text>
-            <Flex marginTop="50px" flexDirection="row" columnGap={5}>
-              {/* <Link href="#" target="_blank">
+            <Flex
+              marginTop={["10px", "50px"]}
+              flexDirection="row"
+              columnGap={[4, 5]}
+            >
+              <Link
+                href="https://api.whatsapp.com/send?phone=5534999551889"
+                target="_blank"
+              >
                 <Image
                   src="/icons/whatsapp.svg"
                   alt="Logo WhatsApp"
-                  width={50}
-                  height={50}
+                  width={sizesSocialLogo}
+                  height={sizesSocialLogo}
                 />
-              </Link> */}
+              </Link>
               <Link href="https://github.com/ifdouglas" target="_blank">
                 <Image
                   src="/icons/github.svg"
                   alt="Logo GitHub"
-                  width={50}
-                  height={50}
+                  width={sizesSocialLogo}
+                  height={sizesSocialLogo}
                 />
               </Link>
               <Link href="https://twiiter.com/ifdouglas" target="_blank">
                 <Image
                   src="/icons/twitter.svg"
                   alt="Logo Twitter"
-                  width={50}
-                  height={50}
+                  width={sizesSocialLogo}
+                  height={sizesSocialLogo}
                 />
               </Link>
               <Link href="https://instagram.com/ifdouglas" target="_blank">
                 <Image
                   src="/icons/instagram.svg"
                   alt="Logo Instagram"
-                  width={50}
-                  height={50}
+                  width={sizesSocialLogo}
+                  height={sizesSocialLogo}
                 />
               </Link>
             </Flex>

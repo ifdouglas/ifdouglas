@@ -23,7 +23,7 @@ export const AnimatedCard = ({ children }: CardAnimatedProps) => {
       justifyContent="center"
       alignItems="center"
       textAlign="center"
-      height={800}
+      height={[600, 800]}
       padding={10}
       transform="translateZ(0)"
       borderRadius={8}
