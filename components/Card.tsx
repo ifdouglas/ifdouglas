@@ -1,29 +1,38 @@
 import React, { ReactNode } from "react";
-import { Flex, Box, Link, Badge, HStack, VStack } from "@chakra-ui/react";
+import {
+  Flex,
+  Box,
+  Link,
+  Badge,
+  HStack,
+  VStack,
+  BoxProps,
+} from "@chakra-ui/react";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
 import { Text } from "./Text";
 
-interface CardProps {
+interface CardProps extends BoxProps {
   title: string;
   subtitle: string;
   href?: string;
   children?: ReactNode;
 }
 
-export const Card = ({ title, subtitle, href, children }: CardProps) => {
+export const Card = ({
+  title,
+  subtitle,
+  href,
+  children,
+  bgColor,
+  ...rest
+}: CardProps) => {
   const Released = () => (
-    <Link
-      display="flex"
-      flexDirection="row"
-      columnGap={3}
-      href={href}
-      target="_blank"
-    >
+    <Flex direction="row" columnGap={3}>
       <Text as="h1">{title}</Text>
       <Box as="sub" transition="transform 200ms">
         <ExternalLinkIcon />
       </Box>
-    </Link>
+    </Flex>
   );
 
   const Soon = () => (
@@ -40,18 +49,23 @@ export const Card = ({ title, subtitle, href, children }: CardProps) => {
     </HStack>
   );
 
+  const handleOnClick = () => window.open(href, "_blank", "noreferrer");
+
   return (
     <Flex
       flexDirection="column"
       padding="1rem 1.2rem"
       height={390}
       borderRadius={8}
+      onClick={handleOnClick}
       _hover={{
-        background: "rgba(100, 100, 100, 0.1)",
+        cursor: "pointer",
+        background: bgColor,
         span: {
           transform: "translateX(4px)",
         },
       }}
+      {...rest}
     >
       <Flex
         fontSize="1.5rem"
@@ -59,8 +73,8 @@ export const Card = ({ title, subtitle, href, children }: CardProps) => {
         flexDirection="column"
         columnGap={3}
       >
-        {!!href ? <Released /> : <Soon />}
-        <Text fontSize={19} fontWeight="hairline">
+        {/* <Released /> */}
+        <Text fontSize={19} fontWeight="regular">
           {subtitle}
         </Text>
       </Flex>

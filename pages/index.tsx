@@ -50,12 +50,21 @@ export default function Home() {
           }}
         >
           <AnimatedCard>
-            <Text fontSize="6xl" fontWeight="extrabold">
-              Douglas Fernandes
+            <Text fontSize="6xl" lineHeight="6xl" fontWeight="extrabold">
+              Douglas
             </Text>
-            <Text fontSize="2xl" m={10} fontWeight="bold" textAlign="justify">
-              {`a Software Engineer living in Brazil that has been
-              working with app development ${workingYears}. Here you can find some of my original ideias. Contact to bring yours to life.`}
+            <Text fontSize="5xl" lineHeight="5xl" fontWeight="extrabold">
+              Fernandes
+            </Text>
+            <Text
+              fontSize="2xl"
+              m={10}
+              fontWeight="semibold"
+              textAlign="justify"
+            >
+              a Software Engineer living in Brazil that has been working with
+              app development 12 years. Here you can find some of my original
+              ideias. Contact to bring yours to life.
             </Text>
             <Flex marginTop="50px" flexDirection="row" columnGap={5}>
               {/* <Link href="#" target="_blank">
@@ -97,9 +106,17 @@ export default function Home() {
         <GridItem rowSpan={1} colSpan={1}>
           <Card
             title="Coffing"
-            subtitle="Create your own home office experience"
+            subtitle="Create your own home office envionment"
             href="https://www.coffing.app"
-          ></Card>
+            bgColor="#232323"
+          >
+            <Image
+              src="/apps/coffing.png"
+              alt="Logo Coffing"
+              width={200}
+              height={200}
+            />
+          </Card>
         </GridItem>
 
         <GridItem rowSpan={1} colSpan={1}>
@@ -107,7 +124,15 @@ export default function Home() {
             title="Dupla de Dois"
             subtitle="Generate couples for your tournament"
             href="https://apps.apple.com/br/app/dupla-de-dois/id6450417982"
-          ></Card>
+            bgColor="#5F17FF"
+          >
+            <Image
+              src="/apps/ddd.png"
+              alt="Logo Dupla de Dois"
+              width={200}
+              height={200}
+            />
+          </Card>
         </GridItem>
 
         {/* <GridItem rowSpan={1} colSpan={1}>
@@ -121,16 +146,25 @@ export default function Home() {
           <Card
             title="TL;DR"
             subtitle="Paste a long text or a huge .pdf to receive a summarize in seconds."
-          ></Card>
+            href="https://apps.apple.com/br/app/tl-dr-too-long-dindt-read/id6449942477"
+            bgColor="#333333"
+          >
+            <Image
+              src="/apps/tldr.svg"
+              alt="Logo TL;DR"
+              width={200}
+              height={200}
+            />
+          </Card>
         </GridItem>
 
-        <GridItem rowSpan={1} colSpan={1}>
+        {/* <GridItem rowSpan={1} colSpan={1}>
           <Card
             title="Hackings"
             subtitle="First class social media services"
             href="https://www.hackings.com.br"
           ></Card>
-        </GridItem>
+        </GridItem> */}
 
         {/* <GridItem rowSpan={1} colSpan={1}>
           <Card title="Singular"></Card>

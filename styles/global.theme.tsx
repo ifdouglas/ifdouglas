@@ -6,7 +6,7 @@ import {
   Amatic_SC as SecondaryFont,
 } from "@next/font/google";
 
-// const spaceGrotesk = Space_Grotesk({ subsets: ["latin"] });
+// const spaceGrotesk = CoffingFont({ subsets: ["latin"] });
 const primaryFont = PrimaryFont({ subsets: ["latin"] });
 const secondaryFont = SecondaryFont({ subsets: ["latin"], weight: "400" });
 
