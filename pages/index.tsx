@@ -50,14 +50,22 @@ export default function Home() {
           }}
         >
           <AnimatedCard>
-            <Text fontSize="6xl" lineHeight="6xl" fontWeight="extrabold">
+            <Text
+              fontSize={["4xl", "6xl"]}
+              lineHeight={["4xl", "6xl"]}
+              fontWeight="extrabold"
+            >
               Douglas
             </Text>
-            <Text fontSize="5xl" lineHeight="5xl" fontWeight="extrabold">
+            <Text
+              fontSize={["3xl", "5xl"]}
+              lineHeight={["3xl", "5xl"]}
+              fontWeight="extrabold"
+            >
               Fernandes
             </Text>
             <Text
-              fontSize="2xl"
+              fontSize={["xl", "2xl"]}
               m={10}
               fontWeight="semibold"
               textAlign="justify"
