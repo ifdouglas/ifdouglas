@@ -1,23 +1,16 @@
-import Head from "next/head";
 import { AnimatedCard } from "@/components/AnimatedCard";
 import { Card } from "@/components/Card";
 import { Flex, Grid, GridItem } from "@chakra-ui/react";
 import { Text } from "@/components/Text";
 import Image from "next/image";
 import Link from "next/link";
-import { formatDistance, subYears } from "date-fns";
+import { formatDistance } from "date-fns";
 
 export default function Home() {
   const workingYears = formatDistance(new Date("2011-01-01"), new Date());
 
   return (
-    <>
-      <Head>
-        <title>Douglas Fernandes</title>
-        <meta name="description" content="Ready to build your idea" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    <Flex overflowX="hidden">
       <Grid
         templateRows={"repeat(2, 1fr)"}
         templateColumns={[
@@ -182,6 +175,6 @@ export default function Home() {
           <Card title="Robotz"></Card>
         </GridItem> */}
       </Grid>
-    </>
+    </Flex>
   );
 }

@@ -1,13 +1,5 @@
 import React, { ReactNode } from "react";
-import {
-  Flex,
-  Box,
-  Link,
-  Badge,
-  HStack,
-  VStack,
-  BoxProps,
-} from "@chakra-ui/react";
+import { Flex, Box, HStack, BoxProps } from "@chakra-ui/react";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
 import { Text } from "./Text";
 

@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react";
-import { Box, Flex, keyframes } from "@chakra-ui/react";
+import { Flex, keyframes } from "@chakra-ui/react";
 
 interface CardAnimatedProps {
   children: ReactNode;
