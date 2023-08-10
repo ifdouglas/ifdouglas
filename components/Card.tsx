@@ -68,9 +68,10 @@ export const Card = ({
         width="fit-content"
         color="rgba(255, 255, 255, 0.5)"
         onClick={handleOnClick}
+        transition="all .2s ease-in-out"
         _hover={{
           cursor: "pointer",
-          transition: "transform .2s ease-in-out",
+          transition: "all .2s ease-in-out",
           transform: "scale(1.1)",
         }}
       >
