@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react";
-import { Flex, Box, HStack, BoxProps } from "@chakra-ui/react";
+import { Flex, Box, HStack, BoxProps, Image } from "@chakra-ui/react";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
 import { Text } from "./Text";
 
@@ -7,14 +7,18 @@ interface CardProps extends BoxProps {
   title: string;
   subtitle: string;
   href?: string;
-  children?: ReactNode;
+  imgSrc: string;
+  imgAlt: string;
+  imgSize: number;
 }
 
 export const Card = ({
   title,
   subtitle,
   href,
-  children,
+  imgSrc,
+  imgAlt,
+  imgSize,
   bgColor,
   ...rest
 }: CardProps) => {
@@ -49,7 +53,7 @@ export const Card = ({
       rowGap={5}
       padding="1rem 1.2rem"
       height={390}
-      borderRadius={8}
+      borderRadius={16}
       _hover={{
         background: bgColor,
         span: {
@@ -65,6 +69,7 @@ export const Card = ({
         </Text>
       </Flex>
       <Flex
+        position="relative"
         width="fit-content"
         color="rgba(255, 255, 255, 0.5)"
         onClick={handleOnClick}
@@ -75,7 +80,25 @@ export const Card = ({
           transform: "scale(1.1)",
         }}
       >
-        {children}
+        <Image
+          borderRadius={16}
+          src={imgSrc}
+          alt={imgAlt}
+          width={imgSize}
+          height={imgSize}
+        />
+        {/* <Image
+          src={imgSrc}
+          alt={imgAlt}
+          width={imgSize - 50}
+          height={imgSize - 50}
+          filter="blur(10px)"
+          position="absolute"
+          bottom={-3}
+          right={0}
+          left={0}
+          margin="auto"
+        /> */}
       </Flex>
     </Flex>
   );

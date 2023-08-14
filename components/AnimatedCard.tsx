@@ -26,7 +26,7 @@ export const AnimatedCard = ({ children }: CardAnimatedProps) => {
       height={[600, 800]}
       padding={10}
       transform="translateZ(0)"
-      borderRadius={8}
+      borderRadius={16}
       overflow="hidden"
       boxShadow="0px 2px 8px -1px #0000001a"
       _before={{
@@ -45,7 +45,7 @@ export const AnimatedCard = ({ children }: CardAnimatedProps) => {
         zIndex: -1,
         inset: 0,
         padding: 1,
-        borderRadius: 10,
+        borderRadius: 16,
         background:
           "linear-gradient(to bottom right, rgba(2, 13, 46, 1), rgba(2, 5, 19, 1))",
         backgroundClip: "content-box",

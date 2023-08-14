@@ -117,14 +117,10 @@ export default function Home() {
             title="Coffing"
             subtitle="Create your own home office envionment"
             href="https://www.coffing.app"
-          >
-            <Image
-              src="/apps/coffing.png"
-              alt="Logo Coffing"
-              width={200}
-              height={200}
-            />
-          </Card>
+            imgSrc="/apps/coffing.png"
+            imgAlt="Logo Coffing"
+            imgSize={200}
+          />
         </GridItem>
 
         <GridItem rowSpan={1} colSpan={1}>
@@ -132,56 +128,22 @@ export default function Home() {
             title="Dupla de Dois"
             subtitle="Generate couples for your tournament"
             href="https://apps.apple.com/br/app/dupla-de-dois/id6450417982"
-          >
-            <Image
-              src="/apps/ddd.png"
-              alt="Logo Dupla de Dois"
-              width={200}
-              height={200}
-            />
-          </Card>
+            imgSrc="/apps/ddd.png"
+            imgAlt="Logo Dupla de Dois"
+            imgSize={200}
+          />
         </GridItem>
-
-        {/* <GridItem rowSpan={1} colSpan={1}>
-          <Card
-            title="WhatsPrinter"
-            subtitle="Get orders from WhatsApp and print in real-time on your restaurant"
-          ></Card>
-        </GridItem> */}
 
         <GridItem rowSpan={1} colSpan={1}>
           <Card
             title="TL;DR"
             subtitle="Paste a long text or a huge .pdf to receive a summarize in seconds."
             href="https://apps.apple.com/br/app/tl-dr-too-long-dindt-read/id6449942477"
-          >
-            <Image
-              src="/apps/tldr.png"
-              alt="Logo TL;DR"
-              width={200}
-              height={200}
-              style={{
-                boxShadow: "0px 2px 8px -1px #0000001a",
-              }}
-            />
-          </Card>
+            imgSrc="/apps/tldr.png"
+            imgAlt="Logo TL;DR"
+            imgSize={200}
+          />
         </GridItem>
-
-        {/* <GridItem rowSpan={1} colSpan={1}>
-          <Card
-            title="Hackings"
-            subtitle="First class social media services"
-            href="https://www.hackings.com.br"
-          ></Card>
-        </GridItem> */}
-
-        {/* <GridItem rowSpan={1} colSpan={1}>
-          <Card title="Singular"></Card>
-        </GridItem> */}
-
-        {/* <GridItem rowSpan={1} colSpan={1}>
-          <Card title="Robotz"></Card>
-        </GridItem> */}
       </Grid>
     </Flex>
   );
