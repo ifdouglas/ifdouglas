@@ -52,6 +52,8 @@ export const Card = ({
       direction="column"
       rowGap={5}
       padding="1rem 1.2rem"
+      justifyContent={["center", "flex-start"]}
+      alignItems={["center", "flex-start"]}
       height={390}
       borderRadius={16}
       _hover={{
@@ -62,12 +64,12 @@ export const Card = ({
       }}
       {...rest}
     >
-      <Flex fontSize="1.5rem" fontWeight={600} direction="column" columnGap={3}>
-        {/* <Released /> */}
-        <Text fontSize={19} fontWeight="regular">
-          {subtitle}
-        </Text>
-      </Flex>
+      {/* <Flex fontSize="1.5rem" fontWeight={600} direction="column" columnGap={3}> */}
+      {/* <Released /> */}
+      <Text fontSize={19} fontWeight="regular">
+        {subtitle}
+      </Text>
+      {/* </Flex> */}
       <Flex
         position="relative"
         width="fit-content"

@@ -13,6 +13,7 @@ export default function Home() {
   return (
     <Flex overflowX="hidden">
       <Grid
+        height={["100%", "100vh"]}
         templateRows={"repeat(2, 1fr)"}
         templateColumns={[
           "repeat(1, 1fr)",
