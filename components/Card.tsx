@@ -1,51 +1,44 @@
-import React, { ReactNode } from "react";
-import { Flex, Box, HStack, BoxProps, Image } from "@chakra-ui/react";
+"use client";
+
+import React from "react";
+import {
+  Flex,
+  Box,
+  HStack,
+  Image,
+  ImageProps,
+  Popover,
+  PopoverTrigger,
+  PopoverContent,
+  PopoverHeader,
+  PopoverArrow,
+  PopoverCloseButton,
+  PopoverBody,
+} from "@chakra-ui/react";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
 import { Text } from "./Text";
 
-interface CardProps extends BoxProps {
+interface CardProps extends ImageProps {
   title: string;
   subtitle: string;
-  href?: string;
-  imgSrc: string;
-  imgAlt: string;
-  imgSize: number;
+  hrefWeb?: string;
+  hrefApple?: string;
+  hrefGoogle?: string;
 }
 
 export const Card = ({
   title,
   subtitle,
-  href,
-  imgSrc,
-  imgAlt,
-  imgSize,
-  bgColor,
+  hrefWeb,
+  hrefApple,
+  hrefGoogle,
   ...rest
 }: CardProps) => {
-  const Released = () => (
-    <Flex direction="row" columnGap={3}>
-      <Text as="h1">{title}</Text>
-      <Box as="sub" transition="transform 200ms">
-        <ExternalLinkIcon />
-      </Box>
-    </Flex>
-  );
-
-  const Soon = () => (
-    <HStack>
-      <Text>{title}</Text>
-      <Text
-        as="sub"
-        transition="transform 200ms"
-        textTransform="uppercase"
-        fontSize={11}
-      >
-        soon
-      </Text>
-    </HStack>
-  );
-
-  const handleOnClick = () => window.open(href, "_blank", "noreferrer");
+  const handleOnClickAppleStore = () =>
+    window.open(hrefApple, "_blank", "noreferrer");
+  const handleOnClickGooglePlay = () =>
+    window.open(hrefGoogle, "_blank", "noreferrer");
+  const handleOnClickWeb = () => window.open(hrefWeb, "_blank", "noreferrer");
 
   return (
     <Flex
@@ -57,50 +50,83 @@ export const Card = ({
       height={390}
       borderRadius={16}
       _hover={{
-        background: bgColor,
         span: {
           transform: "translateX(4px)",
         },
       }}
-      {...rest}
     >
-      {/* <Flex fontSize="1.5rem" fontWeight={600} direction="column" columnGap={3}> */}
-      {/* <Released /> */}
       <Text fontSize={19} fontWeight="regular">
         {subtitle}
       </Text>
-      {/* </Flex> */}
       <Flex
         position="relative"
         width="fit-content"
         color="rgba(255, 255, 255, 0.5)"
-        onClick={handleOnClick}
-        transition="all .2s ease-in-out"
-        _hover={{
-          cursor: "pointer",
-          transition: "all .2s ease-in-out",
-          transform: "scale(1.1)",
-        }}
       >
-        <Image
-          borderRadius={16}
-          src={imgSrc}
-          alt={imgAlt}
-          width={imgSize}
-          height={imgSize}
-        />
-        {/* <Image
-          src={imgSrc}
-          alt={imgAlt}
-          width={imgSize - 50}
-          height={imgSize - 50}
-          filter="blur(10px)"
-          position="absolute"
-          bottom={-3}
-          right={0}
-          left={0}
-          margin="auto"
-        /> */}
+        <Popover placement="top">
+          <PopoverTrigger>
+            <Image
+              borderRadius={16}
+              _hover={{
+                cursor: "pointer",
+                transition: "all .2s ease-in-out",
+                transform: "scale(1.1)",
+              }}
+              alt=""
+              {...rest}
+            />
+          </PopoverTrigger>
+          <PopoverContent
+            maxWidth="fit-content"
+            backgroundColor="#15151500"
+            backdropFilter="blur(6px)"
+          >
+            {/* <PopoverHeader fontWeight="semibold">Download</PopoverHeader> */}
+            <PopoverArrow />
+            {/* <PopoverCloseButton /> */}
+            <PopoverBody flexDirection="row">
+              {hrefApple && (
+                <Image
+                  src="/stores/app-store.svg"
+                  alt="Botão Baixar na Apple Store"
+                  width={150}
+                  onClick={handleOnClickAppleStore}
+                  _hover={{
+                    cursor: "pointer",
+                    transition: "all .2s ease-in-out",
+                    transform: "scale(1.1)",
+                  }}
+                />
+              )}
+              {hrefGoogle && (
+                <Image
+                  src="/stores/google-play.png"
+                  alt="Botão Disponível no Google play"
+                  width={150}
+                  onClick={handleOnClickGooglePlay}
+                  _hover={{
+                    cursor: "pointer",
+                    transition: "all .2s ease-in-out",
+                    transform: "scale(1.1)",
+                  }}
+                />
+              )}
+              {hrefWeb && (
+                <Image
+                  src="/stores/online.svg"
+                  alt="Botão Acessar Online"
+                  height={50}
+                  onClick={handleOnClickWeb}
+                  _hover={{
+                    cursor: "pointer",
+                    transition: "all .2s ease-in-out",
+                    transform: "scale(1.1)",
+                  }}
+                />
+              )}
+            </PopoverBody>
+          </PopoverContent>
+        </Popover>
       </Flex>
     </Flex>
   );

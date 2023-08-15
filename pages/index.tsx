@@ -93,7 +93,7 @@ export default function Home() {
                   height={sizesSocialLogo}
                 />
               </Link>
-              <Link href="https://twiiter.com/ifdouglas" target="_blank">
+              <Link href="https://twitter.com/ifdouglas" target="_blank">
                 <Image
                   src="/icons/twitter.svg"
                   alt="Logo Twitter"
@@ -117,10 +117,11 @@ export default function Home() {
           <Card
             title="Coffing"
             subtitle="Create your own home office envionment"
-            href="https://www.coffing.app"
-            imgSrc="/apps/coffing.png"
-            imgAlt="Logo Coffing"
-            imgSize={200}
+            hrefWeb="https://www.coffing.app"
+            src="/apps/coffing.png"
+            alt="Logo Coffing"
+            width={200}
+            height={200}
           />
         </GridItem>
 
@@ -128,10 +129,12 @@ export default function Home() {
           <Card
             title="Dupla de Dois"
             subtitle="Generate couples for your tournament"
-            href="https://apps.apple.com/br/app/dupla-de-dois/id6450417982"
-            imgSrc="/apps/ddd.png"
-            imgAlt="Logo Dupla de Dois"
-            imgSize={200}
+            hrefApple="https://apps.apple.com/br/app/dupla-de-dois/id6450417982"
+            hrefGoogle="https://apps.apple.com/br/app/dupla-de-dois/id6450417982"
+            src="/apps/ddd.png"
+            alt="Logo Dupla de Dois"
+            width={200}
+            height={200}
           />
         </GridItem>
 
@@ -139,10 +142,11 @@ export default function Home() {
           <Card
             title="TL;DR"
             subtitle="Paste a long text or a huge .pdf to receive a summarize in seconds."
-            href="https://apps.apple.com/br/app/tl-dr-too-long-dindt-read/id6449942477"
-            imgSrc="/apps/tldr.png"
-            imgAlt="Logo TL;DR"
-            imgSize={200}
+            hrefApple="https://apps.apple.com/br/app/tl-dr-too-long-dindt-read/id6449942477"
+            src="/apps/tldr.png"
+            alt="Logo TL;DR"
+            width={200}
+            height={200}
           />
         </GridItem>
       </Grid>
