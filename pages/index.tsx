@@ -11,7 +11,7 @@ export default function Home() {
   const sizesSocialLogo = [30, 50];
 
   return (
-    <Flex overflowX="hidden">
+    <Flex overflowX="hidden" paddingBottom={[200, 0]}>
       <Grid
         height={["100%", "100vh"]}
         templateRows={"repeat(2, 1fr)"}
@@ -93,10 +93,10 @@ export default function Home() {
                   height={sizesSocialLogo}
                 />
               </Link>
-              <Link href="https://twitter.com/ifdouglas" target="_blank">
+              <Link href="https://x.com/ifdouglas" target="_blank">
                 <Image
-                  src="/icons/twitter.svg"
-                  alt="Logo Twitter"
+                  src="/icons/x.svg"
+                  alt="Logo X"
                   draggable={false}
                   width={sizesSocialLogo}
                   height={sizesSocialLogo}

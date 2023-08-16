@@ -47,7 +47,7 @@ export const Card = ({
       <Flex
         direction={["column", "row"]}
         columnGap={5}
-        rowGap={2}
+        rowGap={5}
         position="relative"
         width="fit-content"
         color="rgba(255, 255, 255, 0.5)"
@@ -62,15 +62,14 @@ export const Card = ({
         <Flex
           direction="column"
           columnGap={5}
-          justifyContent="flex-start"
-          alignItems="center"
+          rowGap={5}
+          justifyContent={["flex-start", "center"]}
+          alignItems={["center", "flex-start"]}
         >
           {hrefApple && (
             <Image
-              src="/stores/app-store.svg"
+              src="/stores/app-store.png"
               alt="Botão Baixar na Apple Store"
-              width={150}
-              height={62}
               draggable={false}
               onClick={handleOnClickAppleStore}
               _hover={{
@@ -84,8 +83,6 @@ export const Card = ({
             <Image
               src="/stores/google-play.png"
               alt="Botão Disponível no Google play"
-              width={150}
-              height={63}
               draggable={false}
               onClick={handleOnClickGooglePlay}
               _hover={{
@@ -97,9 +94,8 @@ export const Card = ({
           )}
           {hrefWeb && (
             <Image
-              src="/stores/online.svg"
+              src="/stores/online.png"
               alt="Botão Acessar Online"
-              height={50}
               draggable={false}
               onClick={handleOnClickWeb}
               _hover={{
