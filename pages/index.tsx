@@ -5,6 +5,7 @@ import { Text } from "@/components/Text";
 // import Image from "next/image";
 import Link from "next/link";
 import { formatDistance } from "date-fns";
+import BgParticles from "@/components/BgParticles";
 
 export default function Home() {
   const workingYears = formatDistance(new Date("2011-01-01"), new Date());
@@ -12,6 +13,7 @@ export default function Home() {
 
   return (
     <Flex overflowX="hidden" paddingBottom={[200, 0]}>
+      <BgParticles />
       <Grid
         height={["100%", "100vh"]}
         templateRows={"repeat(2, 1fr)"}
