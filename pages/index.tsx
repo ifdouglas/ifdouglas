@@ -81,6 +81,7 @@ export default function Home() {
                 <Image
                   src="/icons/whatsapp.svg"
                   alt="Logo WhatsApp"
+                  draggable={false}
                   width={sizesSocialLogo}
                   height={sizesSocialLogo}
                 />
@@ -89,6 +90,7 @@ export default function Home() {
                 <Image
                   src="/icons/github.svg"
                   alt="Logo GitHub"
+                  draggable={false}
                   width={sizesSocialLogo}
                   height={sizesSocialLogo}
                 />
@@ -97,6 +99,7 @@ export default function Home() {
                 <Image
                   src="/icons/twitter.svg"
                   alt="Logo Twitter"
+                  draggable={false}
                   width={sizesSocialLogo}
                   height={sizesSocialLogo}
                 />
@@ -105,6 +108,7 @@ export default function Home() {
                 <Image
                   src="/icons/instagram.svg"
                   alt="Logo Instagram"
+                  draggable={false}
                   width={sizesSocialLogo}
                   height={sizesSocialLogo}
                 />

@@ -47,7 +47,7 @@ export const Card = ({
       padding="1rem 1.2rem"
       justifyContent={["center", "flex-start"]}
       alignItems={["center", "flex-start"]}
-      height={390}
+      height={[450, 390]}
       borderRadius={16}
       _hover={{
         span: {
@@ -59,74 +59,65 @@ export const Card = ({
         {subtitle}
       </Text>
       <Flex
+        direction={["column", "row"]}
+        columnGap={5}
+        rowGap={2}
         position="relative"
         width="fit-content"
         color="rgba(255, 255, 255, 0.5)"
       >
-        <Popover placement="top">
-          <PopoverTrigger>
+        <Image borderRadius={16} alt="" draggable={false} {...rest} />
+        <Flex
+          direction="column"
+          columnGap={5}
+          justifyContent="flex-start"
+          alignItems="center"
+        >
+          {hrefApple && (
             <Image
-              borderRadius={16}
+              src="/stores/app-store.svg"
+              alt="Botão Baixar na Apple Store"
+              width={150}
+              height={62}
+              draggable={false}
+              onClick={handleOnClickAppleStore}
               _hover={{
                 cursor: "pointer",
                 transition: "all .2s ease-in-out",
                 transform: "scale(1.1)",
               }}
-              alt=""
-              {...rest}
             />
-          </PopoverTrigger>
-          <PopoverContent
-            maxWidth="fit-content"
-            backgroundColor="#15151500"
-            backdropFilter="blur(6px)"
-          >
-            {/* <PopoverHeader fontWeight="semibold">Download</PopoverHeader> */}
-            <PopoverArrow />
-            {/* <PopoverCloseButton /> */}
-            <PopoverBody flexDirection="row">
-              {hrefApple && (
-                <Image
-                  src="/stores/app-store.svg"
-                  alt="Botão Baixar na Apple Store"
-                  width={150}
-                  onClick={handleOnClickAppleStore}
-                  _hover={{
-                    cursor: "pointer",
-                    transition: "all .2s ease-in-out",
-                    transform: "scale(1.1)",
-                  }}
-                />
-              )}
-              {hrefGoogle && (
-                <Image
-                  src="/stores/google-play.png"
-                  alt="Botão Disponível no Google play"
-                  width={150}
-                  onClick={handleOnClickGooglePlay}
-                  _hover={{
-                    cursor: "pointer",
-                    transition: "all .2s ease-in-out",
-                    transform: "scale(1.1)",
-                  }}
-                />
-              )}
-              {hrefWeb && (
-                <Image
-                  src="/stores/online.svg"
-                  alt="Botão Acessar Online"
-                  height={50}
-                  onClick={handleOnClickWeb}
-                  _hover={{
-                    cursor: "pointer",
-                    transition: "all .2s ease-in-out",
-                    transform: "scale(1.1)",
-                  }}
-                />
-              )}
-            </PopoverBody>
-          </PopoverContent>
-        </Popover>
+          )}
+          {hrefGoogle && (
+            <Image
+              src="/stores/google-play.png"
+              alt="Botão Disponível no Google play"
+              width={150}
+              height={63}
+              draggable={false}
+              onClick={handleOnClickGooglePlay}
+              _hover={{
+                cursor: "pointer",
+                transition: "all .2s ease-in-out",
+                transform: "scale(1.1)",
+              }}
+            />
+          )}
+          {hrefWeb && (
+            <Image
+              src="/stores/online.svg"
+              alt="Botão Acessar Online"
+              height={50}
+              draggable={false}
+              onClick={handleOnClickWeb}
+              _hover={{
+                cursor: "pointer",
+                transition: "all .2s ease-in-out",
+                transform: "scale(1.1)",
+              }}
+            />
+          )}
+        </Flex>
       </Flex>
     </Flex>
   );
