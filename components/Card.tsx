@@ -1,34 +1,20 @@
 "use client";
 
 import React from "react";
-import {
-  Flex,
-  Box,
-  HStack,
-  Image,
-  ImageProps,
-  Popover,
-  PopoverTrigger,
-  PopoverContent,
-  PopoverHeader,
-  PopoverArrow,
-  PopoverCloseButton,
-  PopoverBody,
-} from "@chakra-ui/react";
-import { ExternalLinkIcon } from "@chakra-ui/icons";
+import { Flex, Image, ImageProps } from "@chakra-ui/react";
 import { Text } from "./Text";
 
 interface CardProps extends ImageProps {
+  name?: string;
   title: string;
-  subtitle: string;
   hrefWeb?: string;
   hrefApple?: string;
   hrefGoogle?: string;
 }
 
 export const Card = ({
+  name,
   title,
-  subtitle,
   hrefWeb,
   hrefApple,
   hrefGoogle,
@@ -56,7 +42,7 @@ export const Card = ({
       }}
     >
       <Text fontSize={19} fontWeight="regular">
-        {subtitle}
+        {title}
       </Text>
       <Flex
         direction={["column", "row"]}
