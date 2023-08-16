@@ -82,6 +82,12 @@ export default function Home() {
                   draggable={false}
                   width={sizesSocialLogo}
                   height={sizesSocialLogo}
+                  transition="all .2s ease-in-out"
+                  _hover={{
+                    cursor: "pointer",
+                    transition: "all .2s ease-in-out",
+                    transform: "scale(1.1)",
+                  }}
                 />
               </Link>
               <Link href="https://github.com/ifdouglas" target="_blank">
@@ -91,6 +97,12 @@ export default function Home() {
                   draggable={false}
                   width={sizesSocialLogo}
                   height={sizesSocialLogo}
+                  transition="all .2s ease-in-out"
+                  _hover={{
+                    cursor: "pointer",
+                    transition: "all .2s ease-in-out",
+                    transform: "scale(1.1)",
+                  }}
                 />
               </Link>
               <Link href="https://x.com/ifdouglas" target="_blank">
@@ -100,6 +112,12 @@ export default function Home() {
                   draggable={false}
                   width={sizesSocialLogo}
                   height={sizesSocialLogo}
+                  transition="all .2s ease-in-out"
+                  _hover={{
+                    cursor: "pointer",
+                    transition: "all .2s ease-in-out",
+                    transform: "scale(1.1)",
+                  }}
                 />
               </Link>
               <Link href="https://instagram.com/ifdouglas" target="_blank">
@@ -109,6 +127,12 @@ export default function Home() {
                   draggable={false}
                   width={sizesSocialLogo}
                   height={sizesSocialLogo}
+                  transition="all .2s ease-in-out"
+                  _hover={{
+                    cursor: "pointer",
+                    transition: "all .2s ease-in-out",
+                    transform: "scale(1.1)",
+                  }}
                 />
               </Link>
             </Flex>

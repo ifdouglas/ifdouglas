@@ -72,6 +72,7 @@ export const Card = ({
               alt="Botão Baixar na Apple Store"
               draggable={false}
               onClick={handleOnClickAppleStore}
+              transition="all .2s ease-in-out"
               _hover={{
                 cursor: "pointer",
                 transition: "all .2s ease-in-out",
@@ -85,6 +86,7 @@ export const Card = ({
               alt="Botão Disponível no Google play"
               draggable={false}
               onClick={handleOnClickGooglePlay}
+              transition="all .2s ease-in-out"
               _hover={{
                 cursor: "pointer",
                 transition: "all .2s ease-in-out",
@@ -98,6 +100,7 @@ export const Card = ({
               alt="Botão Acessar Online"
               draggable={false}
               onClick={handleOnClickWeb}
+              transition="all .2s ease-in-out"
               _hover={{
                 cursor: "pointer",
                 transition: "all .2s ease-in-out",
