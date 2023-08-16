@@ -5,7 +5,7 @@ import { Flex, Image, ImageProps } from "@chakra-ui/react";
 import { Text } from "./Text";
 
 interface CardProps extends ImageProps {
-  name?: string;
+  name: string;
   title: string;
   hrefWeb?: string;
   hrefApple?: string;
@@ -29,11 +29,12 @@ export const Card = ({
   return (
     <Flex
       direction="column"
-      rowGap={5}
+      rowGap={3}
+      gridRowGap="2, 5"
       padding="1rem 1.2rem"
       justifyContent={["center", "flex-start"]}
       alignItems={["center", "flex-start"]}
-      height={[450, 390]}
+      height={[500, 390]}
       borderRadius={16}
       _hover={{
         span: {
@@ -41,6 +42,9 @@ export const Card = ({
         },
       }}
     >
+      <Text fontSize={21} fontWeight="bold" textTransform="uppercase">
+        {name}
+      </Text>
       <Text fontSize={19} fontWeight="regular">
         {title}
       </Text>

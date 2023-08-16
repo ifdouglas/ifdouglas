@@ -143,6 +143,7 @@ export default function Home() {
 
         <GridItem rowSpan={1} colSpan={1}>
           <Card
+            name="Coffing"
             title="coffing.title"
             hrefWeb="https://www.coffing.app"
             hrefApple="https://apps.apple.com/br/app/coffing-pomodoro-bird-water/id1606988176"
@@ -155,6 +156,7 @@ export default function Home() {
 
         <GridItem rowSpan={1} colSpan={1}>
           <Card
+            name="ddd.name"
             title="ddd.title"
             hrefApple="https://apps.apple.com/br/app/dupla-de-dois/id6450417982"
             hrefGoogle="https://apps.apple.com/br/app/dupla-de-dois/id6450417982"
@@ -167,6 +169,7 @@ export default function Home() {
 
         <GridItem rowSpan={1} colSpan={1}>
           <Card
+            name="TL;DR"
             title="tldr.title"
             hrefApple="https://apps.apple.com/br/app/tl-dr-too-long-dindt-read/id6449942477"
             src="/apps/tldr.png"
@@ -178,6 +181,7 @@ export default function Home() {
 
         <GridItem rowSpan={1} colSpan={1}>
           <Card
+            name="Formatagram"
             title="formatagram.title"
             hrefApple="https://apps.apple.com/br/app/formatagram/id1500141159"
             hrefGoogle="https://play.google.com/store/apps/details?id=app.tuntz.formatagram"
