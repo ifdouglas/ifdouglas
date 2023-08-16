@@ -145,6 +145,7 @@ export default function Home() {
           <Card
             title="coffing.title"
             hrefWeb="https://www.coffing.app"
+            hrefApple="https://apps.apple.com/br/app/coffing-pomodoro-bird-water/id1606988176"
             src="/apps/coffing.png"
             alt="Logo Coffing"
             width={200}
