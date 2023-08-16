@@ -22,8 +22,6 @@ export default function BgParticles() {
       }px ${colorParticle}`;
     }
 
-    console.log("val", val);
-
     return val;
   };
 
