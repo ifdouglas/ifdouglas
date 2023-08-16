@@ -52,7 +52,13 @@ export const Card = ({
         width="fit-content"
         color="rgba(255, 255, 255, 0.5)"
       >
-        <Image borderRadius={16} alt="" draggable={false} {...rest} />
+        <Image
+          borderRadius="22.5%"
+          alt=""
+          draggable={false}
+          boxShadow="0px 2px 8px -1px #0000001a"
+          {...rest}
+        />
         <Flex
           direction="column"
           columnGap={5}
