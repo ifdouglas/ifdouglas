@@ -66,6 +66,20 @@ export const Card = ({
           justifyContent={["flex-start", "center"]}
           alignItems={["center", "flex-start"]}
         >
+          {hrefWeb && (
+            <Image
+              src="/stores/online.png"
+              alt="Botão Acessar Online"
+              draggable={false}
+              onClick={handleOnClickWeb}
+              transition="all .2s ease-in-out"
+              _hover={{
+                cursor: "pointer",
+                transition: "all .2s ease-in-out",
+                transform: "scale(1.1)",
+              }}
+            />
+          )}
           {hrefApple && (
             <Image
               src="/stores/app-store.png"
@@ -86,20 +100,6 @@ export const Card = ({
               alt="Botão Disponível no Google play"
               draggable={false}
               onClick={handleOnClickGooglePlay}
-              transition="all .2s ease-in-out"
-              _hover={{
-                cursor: "pointer",
-                transition: "all .2s ease-in-out",
-                transform: "scale(1.1)",
-              }}
-            />
-          )}
-          {hrefWeb && (
-            <Image
-              src="/stores/online.png"
-              alt="Botão Acessar Online"
-              draggable={false}
-              onClick={handleOnClickWeb}
               transition="all .2s ease-in-out"
               _hover={{
                 cursor: "pointer",
