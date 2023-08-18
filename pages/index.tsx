@@ -159,7 +159,7 @@ export default function Home() {
             name="ddd.name"
             title="ddd.title"
             hrefApple="https://apps.apple.com/br/app/dupla-de-dois/id6450417982"
-            hrefGoogle="https://apps.apple.com/br/app/dupla-de-dois/id6450417982"
+            hrefGoogle="https://play.google.com/store/apps/details?id=br.com.hackings.dupla_de_dois"
             src="/apps/ddd.png"
             alt="Logo Dupla de Dois"
             width={200}
