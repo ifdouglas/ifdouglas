@@ -67,7 +67,7 @@ export default function Home() {
               fontWeight="semibold"
               textAlign="justify"
             >
-              douglas.summary
+              me.summary
             </Text>
             <Flex
               marginTop={["10px", "50px"]}
