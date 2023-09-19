@@ -47,6 +47,7 @@ export default function Home() {
           }}
         >
           <AnimatedCard>
+            <Text fontSize={["4xl", "6xl"]}>👾</Text>
             <Text
               fontSize={["4xl", "6xl"]}
               lineHeight={["4xl", "6xl"]}
