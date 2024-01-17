@@ -143,8 +143,8 @@ export default function Home() {
             width={200}
             height={200}
             badges={[
-              <Badge key="badge.coffing.app" value="app" />,
-              <Badge key="badge.coffing.new" colorScheme="green" value="new" />,
+              <Badge key="badge.moj.app" value="app" />,
+              <Badge key="badge.moj.new" colorScheme="green" value="new" />,
             ]}
           />
         </GridItem>
@@ -153,14 +153,14 @@ export default function Home() {
           <Card
             name="Technical Interview Buddy"
             title="tib.title"
-            hrefWeb="https://gptstore.ai/gpts/JkO0B4aT4C-tech-interview-buddy"
+            hrefGpt="https://gptstore.ai/gpts/JkO0B4aT4C-tech-interview-buddy"
             src="/apps/tib.png"
             alt="Logo TIB"
             width={200}
             height={200}
             badges={[
-              <Badge key="badge.coffing.gpt" colorScheme="blue" value="GPT" />,
-              <Badge key="badge.coffing.new" colorScheme="green" value="new" />,
+              <Badge key="badge.tib.gpt" colorScheme="blue" value="GPT" />,
+              <Badge key="badge.tib.new" colorScheme="green" value="new" />,
             ]}
           />
         </GridItem>
@@ -189,7 +189,7 @@ export default function Home() {
             alt="Logo Dupla de Dois"
             width={200}
             height={200}
-            badges={[<Badge key="badge.coffing.app" value="app" />]}
+            badges={[<Badge key="badge.ddd.app" value="app" />]}
           />
         </GridItem>
 
@@ -202,7 +202,7 @@ export default function Home() {
             alt="Logo TL;DR"
             width={200}
             height={200}
-            badges={[<Badge key="badge.coffing.app" value="app" />]}
+            badges={[<Badge key="badge.tldr.app" value="app" />]}
           />
         </GridItem>
 
@@ -216,7 +216,23 @@ export default function Home() {
             alt="Logo Formatagram"
             width={200}
             height={200}
-            badges={[<Badge key="badge.coffing.app" value="app" />]}
+            badges={[<Badge key="badge.formatagram.app" value="app" />]}
+          />
+        </GridItem>
+
+        <GridItem rowSpan={1} colSpan={1}>
+          <Card
+            name="gic.name"
+            title="gic.title"
+            hrefGpt="https://gptstore.ai/gpts/KqpQRPwrd6-gerador-infinito-de-cartas"
+            src="/apps/gic.png"
+            alt="Logo GIC"
+            width={200}
+            height={200}
+            badges={[
+              <Badge key="badge.gic.gpt" colorScheme="blue" value="GPT" />,
+              <Badge key="badge.gic.new" colorScheme="green" value="new" />,
+            ]}
           />
         </GridItem>
       </Grid>

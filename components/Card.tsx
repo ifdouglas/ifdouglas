@@ -10,6 +10,7 @@ interface CardProps extends ImageProps {
   hrefWeb?: string;
   hrefApple?: string;
   hrefGoogle?: string;
+  hrefGpt?: string;
   badges?: ReactNode[];
 }
 
@@ -19,6 +20,7 @@ export const Card = ({
   hrefWeb,
   hrefApple,
   hrefGoogle,
+  hrefGpt,
   badges,
   ...rest
 }: CardProps) => {
@@ -27,6 +29,8 @@ export const Card = ({
   const handleOnClickGooglePlay = () =>
     window.open(hrefGoogle, "_blank", "noreferrer");
   const handleOnClickWeb = () => window.open(hrefWeb, "_blank", "noreferrer");
+  const handleOnClickGptStoreAi = () =>
+    window.open(hrefGpt, "_blank", "noreferrer");
 
   return (
     <Flex
@@ -45,7 +49,7 @@ export const Card = ({
         </Text>
         {badges}
       </Flex>
-      <Text fontSize={19} fontWeight="regular">
+      <Text fontSize={19} fontWeight="regular" height="60px">
         {title}
       </Text>
       <Flex
@@ -104,6 +108,20 @@ export const Card = ({
               alt="Botão Disponível no Google play"
               draggable={false}
               onClick={handleOnClickGooglePlay}
+              transition="all .2s ease-in-out"
+              _hover={{
+                cursor: "pointer",
+                transition: "all .2s ease-in-out",
+                transform: "scale(1.1)",
+              }}
+            />
+          )}
+          {hrefGpt && (
+            <Image
+              src="/stores/gptstoreai.png"
+              alt="Botão Disponível na GPT Store AI"
+              draggable={false}
+              onClick={handleOnClickGptStoreAi}
               transition="all .2s ease-in-out"
               _hover={{
                 cursor: "pointer",
