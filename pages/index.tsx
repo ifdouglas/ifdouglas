@@ -137,7 +137,7 @@ export default function Home() {
           <Card
             name="Moj"
             title="moj.title"
-            hrefWeb="https://apps.apple.com/br/app/dupla-de-dois/id6450417982"
+            hrefWeb="https://moj.ifdouglas.com"
             src="/apps/moj.png"
             alt="Logo Moj"
             width={200}
