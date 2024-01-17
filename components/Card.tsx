@@ -43,13 +43,13 @@ export const Card = ({
       height={[500, 390]}
       borderRadius={16}
     >
-      <Flex direction="row" columnGap={2}>
+      <Flex direction={["column", "row"]} width="100%" columnGap={2} rowGap={2}>
         <Text fontSize={21} fontWeight="bold">
           {name}
         </Text>
         {badges}
       </Flex>
-      <Text fontSize={19} fontWeight="regular" height="60px">
+      <Text fontSize={19} fontWeight="regular" height={[80, 60]}>
         {title}
       </Text>
       <Flex
