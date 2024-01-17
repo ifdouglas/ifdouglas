@@ -6,6 +6,7 @@ import { Text } from "@/components/Text";
 import Link from "next/link";
 import { formatDistance } from "date-fns";
 import BgParticles from "@/components/BgParticles";
+import { Badge } from "@/components/Badge";
 
 export default function Home() {
   const workingYears = formatDistance(new Date("2011-01-01"), new Date());
@@ -15,21 +16,22 @@ export default function Home() {
     <Flex overflowX="hidden" paddingBottom={[200, 0]}>
       <BgParticles />
       <Grid
-        height={["100%", "100vh"]}
+        height="100%"
         templateRows={"repeat(2, 1fr)"}
         templateColumns={[
           "repeat(1, 1fr)",
           "repeat(1, 1fr)",
-          "repeat(2, 1fr)",
+          "repeat(1, 1fr)",
           "repeat(2, 1fr)",
           "repeat(2, 1fr)",
           "repeat(3, 1fr)",
         ]}
         padding={8}
         gap={5}
+        zIndex={2}
       >
         <GridItem
-          rowSpan={2}
+          rowSpan={1}
           colSpan={1}
           position="relative"
           _after={{
@@ -42,39 +44,28 @@ export default function Home() {
             background:
               "radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0))",
             width: "813px",
-            height: "900px",
+            height: "300px",
             zIndex: -1,
           }}
         >
           <AnimatedCard>
-            <Text fontSize={["4xl", "6xl"]}>👾</Text>
+            <Text fontSize={["2xl", "4xl"]}>👾</Text>
             <Text
-              fontSize={["4xl", "6xl"]}
-              lineHeight={["4xl", "6xl"]}
+              fontSize={["2xl", "5xl"]}
+              lineHeight={["2xl", "5xl"]}
               fontWeight="extrabold"
             >
-              Douglas
+              Douglas Fernandes
             </Text>
             <Text
-              fontSize={["3xl", "5xl"]}
-              lineHeight={["3xl", "5xl"]}
-              fontWeight="extrabold"
-            >
-              Fernandes
-            </Text>
-            <Text
-              fontSize={["lg", "2xl"]}
-              m={10}
+              fontSize={["lg", "1xl"]}
+              m={2}
               fontWeight="semibold"
               textAlign="justify"
             >
               me.summary
             </Text>
-            <Flex
-              marginTop={["10px", "50px"]}
-              flexDirection="row"
-              columnGap={[4, 5]}
-            >
+            <Flex flexDirection="row" mt="70px" columnGap={[4, 5]}>
               <Link
                 href="https://api.whatsapp.com/send?phone=5534999551889"
                 target="_blank"
@@ -144,6 +135,38 @@ export default function Home() {
 
         <GridItem rowSpan={1} colSpan={1}>
           <Card
+            name="Moj"
+            title="moj.title"
+            hrefWeb="https://apps.apple.com/br/app/dupla-de-dois/id6450417982"
+            src="/apps/moj.png"
+            alt="Logo Moj"
+            width={200}
+            height={200}
+            badges={[
+              <Badge key="badge.coffing.app" value="app" />,
+              <Badge key="badge.coffing.new" colorScheme="green" value="new" />,
+            ]}
+          />
+        </GridItem>
+
+        <GridItem rowSpan={1} colSpan={1}>
+          <Card
+            name="Technical Interview Buddy"
+            title="tib.title"
+            hrefWeb="https://gptstore.ai/gpts/JkO0B4aT4C-tech-interview-buddy"
+            src="/apps/tib.png"
+            alt="Logo TIB"
+            width={200}
+            height={200}
+            badges={[
+              <Badge key="badge.coffing.gpt" colorScheme="blue" value="GPT" />,
+              <Badge key="badge.coffing.new" colorScheme="green" value="new" />,
+            ]}
+          />
+        </GridItem>
+
+        <GridItem rowSpan={1} colSpan={1}>
+          <Card
             name="Coffing"
             title="coffing.title"
             hrefWeb="https://www.coffing.app"
@@ -152,6 +175,7 @@ export default function Home() {
             alt="Logo Coffing"
             width={200}
             height={200}
+            badges={[<Badge key="badge.coffing.app" value="app" />]}
           />
         </GridItem>
 
@@ -165,6 +189,7 @@ export default function Home() {
             alt="Logo Dupla de Dois"
             width={200}
             height={200}
+            badges={[<Badge key="badge.coffing.app" value="app" />]}
           />
         </GridItem>
 
@@ -177,6 +202,7 @@ export default function Home() {
             alt="Logo TL;DR"
             width={200}
             height={200}
+            badges={[<Badge key="badge.coffing.app" value="app" />]}
           />
         </GridItem>
 
@@ -190,6 +216,7 @@ export default function Home() {
             alt="Logo Formatagram"
             width={200}
             height={200}
+            badges={[<Badge key="badge.coffing.app" value="app" />]}
           />
         </GridItem>
       </Grid>

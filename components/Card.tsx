@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { ReactNode } from "react";
 import { Flex, Image, ImageProps } from "@chakra-ui/react";
 import { Text } from "./Text";
 
@@ -10,6 +10,7 @@ interface CardProps extends ImageProps {
   hrefWeb?: string;
   hrefApple?: string;
   hrefGoogle?: string;
+  badges?: ReactNode[];
 }
 
 export const Card = ({
@@ -18,6 +19,7 @@ export const Card = ({
   hrefWeb,
   hrefApple,
   hrefGoogle,
+  badges,
   ...rest
 }: CardProps) => {
   const handleOnClickAppleStore = () =>
@@ -36,15 +38,13 @@ export const Card = ({
       alignItems={["center", "flex-start"]}
       height={[500, 390]}
       borderRadius={16}
-      _hover={{
-        span: {
-          transform: "translateX(4px)",
-        },
-      }}
     >
-      <Text fontSize={21} fontWeight="bold" textTransform="uppercase">
-        {name}
-      </Text>
+      <Flex direction="row" columnGap={2}>
+        <Text fontSize={21} fontWeight="bold">
+          {name}
+        </Text>
+        {badges}
+      </Flex>
       <Text fontSize={19} fontWeight="regular">
         {title}
       </Text>
