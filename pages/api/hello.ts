@@ -9,5 +9,5 @@ export default function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>
 ) {
-  res.status(200).json({ name: 'Douglas Fernandes' })
+  res.status(200).json({ name: "Hi, I'm Douglas! That's it! Come back to my site, there's where the magic is." })
 }
