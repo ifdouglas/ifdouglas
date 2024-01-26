@@ -24,13 +24,8 @@ export const Card = ({
   badges,
   ...rest
 }: CardProps) => {
-  const handleOnClickAppleStore = () =>
-    window.open(hrefApple, "_blank", "noreferrer");
-  const handleOnClickGooglePlay = () =>
-    window.open(hrefGoogle, "_blank", "noreferrer");
-  const handleOnClickWeb = () => window.open(hrefWeb, "_blank", "noreferrer");
-  const handleOnClickGptStoreAi = () =>
-    window.open(hrefGpt, "_blank", "noreferrer");
+  const handleOnClick = (href: string) =>
+    window.open(href, "_blank", "noreferrer");
 
   return (
     <Flex
@@ -40,7 +35,7 @@ export const Card = ({
       padding="1rem 1.2rem"
       justifyContent={["center", "flex-start"]}
       alignItems={["center", "flex-start"]}
-      height={[500, 390]}
+      height={[500, 330]}
       borderRadius={16}
     >
       <Flex direction={["column", "row"]} width="100%" columnGap={2} rowGap={2}>
@@ -79,7 +74,7 @@ export const Card = ({
               src="/stores/online.png"
               alt="Botão Acessar Online"
               draggable={false}
-              onClick={handleOnClickWeb}
+              onClick={() => handleOnClick(hrefWeb)}
               transition="all .2s ease-in-out"
               _hover={{
                 cursor: "pointer",
@@ -93,7 +88,7 @@ export const Card = ({
               src="/stores/app-store.png"
               alt="Botão Baixar na Apple Store"
               draggable={false}
-              onClick={handleOnClickAppleStore}
+              onClick={() => handleOnClick(hrefApple)}
               transition="all .2s ease-in-out"
               _hover={{
                 cursor: "pointer",
@@ -107,7 +102,7 @@ export const Card = ({
               src="/stores/google-play.png"
               alt="Botão Disponível no Google play"
               draggable={false}
-              onClick={handleOnClickGooglePlay}
+              onClick={() => handleOnClick(hrefGoogle)}
               transition="all .2s ease-in-out"
               _hover={{
                 cursor: "pointer",
@@ -121,7 +116,7 @@ export const Card = ({
               src="/stores/gptstoreai.png"
               alt="Botão Disponível na GPT Store AI"
               draggable={false}
-              onClick={handleOnClickGptStoreAi}
+              onClick={() => handleOnClick(hrefGpt)}
               transition="all .2s ease-in-out"
               _hover={{
                 cursor: "pointer",
