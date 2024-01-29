@@ -65,7 +65,7 @@ export default function Home() {
             >
               me.summary
             </Text>
-            <Flex flexDirection="row" mt="70px" columnGap={[4, 5]}>
+            <Flex flexDirection="row" mt="10px" columnGap={[4, 5]}>
               <Link
                 href="https://api.whatsapp.com/send?phone=5534999551889"
                 target="_blank"
