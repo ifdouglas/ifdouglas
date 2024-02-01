@@ -1,7 +1,7 @@
 ## Douglas Fernandes
-Over 12 years in Software Development. Front-End heavy. Holding a Bachelor's degree in Information Systems. My main stack today are Next.Js, React and TypeScript. But I also have been using Flutter and AI (ChatGPT, DALL-E) to create useful Apps and GPTs.
+As a Software Engineer with 12+ years of experience in software development, I am passionate about delivering quality software that enhances the user experience. I have a strong background in UI, UX, SEO, performance optimization and micro-animations. Cutting-edge technologies such as React, Next.js, TypeScript, React Testing Library and React Query are part of my current main stack.
 
-I’m a little obsessed to know how things work. When I face something new, I dive into to understand. I can easily say that this is my best quality. Because I believe that know the core is the key to minimize failures or fast recovery from one. 
+I have been working majority of my latest jobs for Banks, so I have a strong background in the CI/CD of this kind of institutions and all the security measures, issues and responsibilities that a high-end software engineering needs.
 
-My portfolio of creations: [www.ifdouglas.com](https://www.ifdouglas.com)
+I also enjoy developing and designing my own apps, which you can find on my personal portfolio: [www.ifdouglas.com](https://www.ifdouglas.com). All my apps are in production, entirely designed and built by me and running for real customers. 
 
