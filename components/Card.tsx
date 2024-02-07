@@ -32,23 +32,23 @@ export const Card = ({
       direction="column"
       rowGap={3}
       gridRowGap="2, 5"
-      padding="1rem 1.2rem"
-      justifyContent={["center", "flex-start"]}
-      alignItems={["center", "flex-start"]}
-      height={[500, 330]}
+      padding="1.2rem"
+      justifyContent={["flex-start"]}
+      alignItems={["flex-start"]}
+      height={[250, 330]}
       borderRadius={16}
     >
-      <Flex direction={["column", "row"]} width="100%" columnGap={2} rowGap={2}>
-        <Text fontSize={21} fontWeight="bold">
+      <Flex direction="row" width="100%" columnGap={2} rowGap={2}>
+        <Text fontSize={[17, 21]} fontWeight="bold">
           {name}
         </Text>
         {badges}
       </Flex>
-      <Text fontSize={19} fontWeight="regular" height={[80, 60]}>
+      <Text fontSize={[15, 19]} fontWeight="regular">
         {title}
       </Text>
       <Flex
-        direction={["column", "row"]}
+        direction={["row", "row"]}
         columnGap={5}
         rowGap={5}
         position="relative"
@@ -60,13 +60,15 @@ export const Card = ({
           alt=""
           draggable={false}
           boxShadow="0px 2px 8px -1px #0000001a"
+          width={[130, 200]}
+          height={[130, 200]}
           {...rest}
         />
         <Flex
           direction="column"
           columnGap={5}
           rowGap={5}
-          justifyContent={["flex-start", "center"]}
+          justifyContent={["center"]}
           alignItems={["center", "flex-start"]}
         >
           {hrefWeb && (

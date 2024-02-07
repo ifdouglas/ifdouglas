@@ -17,7 +17,7 @@ export default function Home() {
       <BgParticles />
       <Grid
         height="100%"
-        templateRows={"repeat(2, 1fr)"}
+        // templateRows={"repeat(2, 1fr)"}
         templateColumns={[
           "repeat(1, 1fr)",
           "repeat(1, 1fr)",
@@ -60,6 +60,7 @@ export default function Home() {
             <Text
               fontSize={["lg", "1xl"]}
               m={2}
+              display={["none", "block"]}
               fontWeight="semibold"
               textAlign="justify"
             >
@@ -140,11 +141,9 @@ export default function Home() {
             hrefWeb="https://moj.ifdouglas.com"
             src="/apps/moj.png"
             alt="Logo Moj"
-            width={200}
-            height={200}
             badges={[
-              <Badge key="badge.moj.app" value="app" />,
               <Badge key="badge.moj.new" colorScheme="green" value="new" />,
+              <Badge key="badge.moj.app" value="app" />,
             ]}
           />
         </GridItem>
@@ -156,11 +155,9 @@ export default function Home() {
             hrefGpt="https://gptstore.ai/gpts/JkO0B4aT4C-tech-interview-buddy"
             src="/apps/tib.png"
             alt="Logo TIB"
-            width={200}
-            height={200}
             badges={[
-              <Badge key="badge.tib.gpt" colorScheme="blue" value="GPT" />,
               <Badge key="badge.tib.new" colorScheme="green" value="new" />,
+              <Badge key="badge.tib.gpt" colorScheme="blue" value="GPT" />,
             ]}
           />
         </GridItem>
@@ -173,8 +170,6 @@ export default function Home() {
             hrefApple="https://apps.apple.com/br/app/coffing-pomodoro-bird-water/id1606988176"
             src="/apps/coffing.png"
             alt="Logo Coffing"
-            width={200}
-            height={200}
             badges={[<Badge key="badge.coffing.app" value="app" />]}
           />
         </GridItem>
@@ -187,8 +182,6 @@ export default function Home() {
             hrefGoogle="https://play.google.com/store/apps/details?id=br.com.hackings.dupla_de_dois"
             src="/apps/ddd.png"
             alt="Logo Dupla de Dois"
-            width={200}
-            height={200}
             badges={[<Badge key="badge.ddd.app" value="app" />]}
           />
         </GridItem>
@@ -200,8 +193,6 @@ export default function Home() {
             hrefApple="https://apps.apple.com/br/app/tl-dr-too-long-dindt-read/id6449942477"
             src="/apps/tldr.png"
             alt="Logo TL;DR"
-            width={200}
-            height={200}
             badges={[<Badge key="badge.tldr.app" value="app" />]}
           />
         </GridItem>
@@ -214,8 +205,6 @@ export default function Home() {
             hrefGoogle="https://play.google.com/store/apps/details?id=app.tuntz.formatagram"
             src="/apps/formatagram.png"
             alt="Logo Formatagram"
-            width={200}
-            height={200}
             badges={[<Badge key="badge.formatagram.app" value="app" />]}
           />
         </GridItem>
@@ -227,11 +216,9 @@ export default function Home() {
             hrefGpt="https://gptstore.ai/gpts/KqpQRPwrd6-gerador-infinito-de-cartas"
             src="/apps/gic.png"
             alt="Logo GIC"
-            width={200}
-            height={200}
             badges={[
-              <Badge key="badge.gic.gpt" colorScheme="blue" value="GPT" />,
               <Badge key="badge.gic.new" colorScheme="green" value="new" />,
+              <Badge key="badge.gic.gpt" colorScheme="blue" value="GPT" />,
             ]}
           />
         </GridItem>

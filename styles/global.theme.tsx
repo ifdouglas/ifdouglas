@@ -2,7 +2,7 @@ import { extendTheme } from "@chakra-ui/react";
 import type { StyleFunctionProps } from "@chakra-ui/styled-system";
 // import { Space_Grotesk } from "@next/font/google";
 import {
-  Inter_Tight as PrimaryFont,
+  Inter as PrimaryFont,
   Amatic_SC as SecondaryFont,
 } from "@next/font/google";
 

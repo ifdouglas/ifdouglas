@@ -23,7 +23,7 @@ export const AnimatedCard = ({ children }: CardAnimatedProps) => {
       justifyContent="center"
       alignItems="center"
       textAlign="center"
-      height={[400, 400]}
+      height={[150, 400]}
       padding={10}
       transform="translateZ(0)"
       borderRadius={16}
@@ -35,7 +35,7 @@ export const AnimatedCard = ({ children }: CardAnimatedProps) => {
         zIndex: -1,
         animation: `6s ${rotate} linear infinite`,
         width: "200%",
-        height: "200%",
+        height: "300%",
         background:
           "conic-gradient(#ffffff80,#ffffff40,#ffffff30,#ffffff20,#ffffff10,#ffffff10,#ffffff80);",
       }}
