@@ -49,10 +49,10 @@ export default function Home() {
           }}
         >
           <AnimatedCard>
-            <Text fontSize={["2xl", "4xl"]}>👾</Text>
+            <Text fontSize={["2xl"]}>👾</Text>
             <Text
-              fontSize={["2xl", "5xl"]}
-              lineHeight={["2xl", "5xl"]}
+              fontSize={["2xl"]}
+              lineHeight={["2xl"]}
               fontWeight="extrabold"
             >
               Douglas Fernandes
@@ -100,7 +100,7 @@ export default function Home() {
                   }}
                 />
               </Link>
-              <Link href="https://x.com/ifdouglas" target="_blank">
+              {/* <Link href="https://x.com/ifdouglas" target="_blank">
                 <Image
                   src="/icons/x.svg"
                   alt="Logo X"
@@ -114,7 +114,7 @@ export default function Home() {
                     transform: "scale(1.1)",
                   }}
                 />
-              </Link>
+              </Link> */}
               <Link href="https://instagram.com/ifdouglas" target="_blank">
                 <Image
                   src="/icons/instagram.svg"
@@ -136,13 +136,39 @@ export default function Home() {
 
         <GridItem rowSpan={1} colSpan={1}>
           <Card
+            name="fiftyfit.name"
+            title="fiftyfit.title"
+            hrefWeb="https://www.fiftyfit.app"
+            hrefGoogle="https://play.google.com/store/apps/details?id=com.ifdouglas.fiftyfit"
+            hrefApple="https://apps.apple.com/br/app/fiftyfit/id6523425755"
+            src="/apps/fiftyfit.png"
+            alt="Logo Fiftyfit"
+            badges={[
+              <Badge key="badge.fiftyfit.new" colorScheme="green" value="new" />, <Badge key="badge.fiftyfit.app" value="app" />]}
+          />
+        </GridItem>
+
+        <GridItem rowSpan={1} colSpan={1}>
+          <Card
+            name="coffing.name"
+            title="coffing.title"
+            hrefWeb="https://www.coffing.app"
+            // hrefApple="https://apps.apple.com/br/app/coffing-pomodoro-bird-water/id1606988176"
+            src="/apps/coffing.png"
+            alt="Logo Coffing"
+            badges={[
+              <Badge key="badge.coffing.new" colorScheme="green" value="new" />, <Badge key="badge.coffing.app" value="app" />]}
+          />
+        </GridItem>
+
+        <GridItem rowSpan={1} colSpan={1}>
+          <Card
             name="Moj"
             title="moj.title"
             hrefWeb="https://moj.ifdouglas.com"
             src="/apps/moj.png"
             alt="Logo Moj"
             badges={[
-              <Badge key="badge.moj.new" colorScheme="green" value="new" />,
               <Badge key="badge.moj.app" value="app" />,
             ]}
           />
@@ -156,21 +182,8 @@ export default function Home() {
             src="/apps/tib.png"
             alt="Logo TIB"
             badges={[
-              <Badge key="badge.tib.new" colorScheme="green" value="new" />,
               <Badge key="badge.tib.gpt" colorScheme="blue" value="GPT" />,
             ]}
-          />
-        </GridItem>
-
-        <GridItem rowSpan={1} colSpan={1}>
-          <Card
-            name="Coffing"
-            title="coffing.title"
-            hrefWeb="https://www.coffing.app"
-            hrefApple="https://apps.apple.com/br/app/coffing-pomodoro-bird-water/id1606988176"
-            src="/apps/coffing.png"
-            alt="Logo Coffing"
-            badges={[<Badge key="badge.coffing.app" value="app" />]}
           />
         </GridItem>
 
@@ -217,7 +230,6 @@ export default function Home() {
             src="/apps/gic.png"
             alt="Logo GIC"
             badges={[
-              <Badge key="badge.gic.new" colorScheme="green" value="new" />,
               <Badge key="badge.gic.gpt" colorScheme="blue" value="GPT" />,
             ]}
           />

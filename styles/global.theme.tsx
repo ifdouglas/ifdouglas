@@ -19,7 +19,8 @@ export const theme = extendTheme({
     global: (props: StyleFunctionProps) => ({
       body: {
         fontFamily: primaryFont.style.fontFamily,
-        color: "whiteAlpha.900",
+        color: "#ffffff",
+        bg: "#111111",
         lineHeight: "base",
       },
       h3: {
