@@ -3,5 +3,5 @@ As a Software Engineer with over 12 years of software development, I am passiona
 
 Most of my last jobs were for startups and banking companies, so I have a strong background in the CI/CD processes and all the security measures, issues and responsibilities that a high-end software engineering needs.
 
-Now I own my Software Company: [www.byhumanoid.com](https://www.byhumanoid.com).
+Now I own my Software Company: [byhumanoid.com](https://www.byhumanoid.com).
 Contact me and let's bring your idea to life!
